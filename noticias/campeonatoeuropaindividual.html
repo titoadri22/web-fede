@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMPEONATO DE EUROPA INDIVIDUAL</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #000;
+            --bg-color: #f9f9f9;
+            --container-width: 1100px; /* Increased max width for BIGGER impact */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Placeholder - Minimalist */
+        .header-bar {
+            background: #fff;
+            padding: 10px 0; /* Reduced padding */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Reduced margin */
+        }
+        .header-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 10px 40px; /* Reduced padding side/top */
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        article {
+            padding: 20px; /* Reduced padding */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: #000;
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 900px; /* Wider text to match */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify; 
+        }
+        
+        .content-text p {
+            margin-bottom: 15px; 
+        }
+
+        /* Images Grid: 3 Columns Precise */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px; /* Tighter gap */
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            /* Calc width for 3 columns minus gap */
+            width: calc(33.333% - 8px); 
+            max-width: none; 
+            height: 550px; /* MUCH TALLER to allow vertical images to shine */
+            overflow: hidden; 
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+
+        .gallery-item:hover {
+            z-index: 10;
+            transform: scale(1.02); /* Pop out effect instead of just up */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                max-height: 600px;
+            }
+            article {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="header-content">
+            <a href="../index.html">← Volver a Noticias</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <article>
+            <h1>CAMPEONATO DE EUROPA INDIVIDUAL</h1>
+
+            <div class="content-text">
+                <p>CAMPEONATO DE EUROPA INDIVIDUAL
+Del 20 al 23 de agosto se disputa en Chartres (Francia) el Campeonato de Europa Individual de Squash, cita que reúne a los 64 mejores jugadores y jugadoras del continente. España acudirá con un equipo formado por cuatro hombres y cuatro mujeres, con Iker Pajares y Marta Domínguez como principales referentes tras los bronces conseguidos en el pasado Europeo y en los recientes World Games, respectivamente.</p>
+<p>En categoría masculina, el campeón de España Iker Pajares parte como cabeza de serie 3/4 con el objetivo de revalidar o mejorar su bronce continental. Edmon López e Iván Pérez figuran en los puestos 9/16, mientras que el joven Hugo Lafuente arranca desde el 17/32. Los franceses Victor Crouin, campeón en las dos últimas ediciones, y Baptiste Masotti son los grandes favoritos del cuadro.</p>
+<p>En el torneo femenino, Marta Domínguez inicia como cabeza de serie 5/8, tras ser sexta en 2023 y cuarta en 2022. Cristina Gómez, actual campeona de España, y Sofía Mateos parten desde el 9/16, mientras que Noa Romero, que llega tras una exitosa gira australiana con cuatro títulos PSA, lo hará desde el 17/32. Las hermanas belgas Gilis son las principales favoritas al título.</p>
+<p>La preparación del equipo español se ha llevado a cabo en el Polideportivo de la Luz de Tres Cantos, donde los ocho jugadores se concentraron durante tres días aprovechando la nueva pista de cristal y unas completas instalaciones.</p>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_91ceae9f48b942b49219e592a36254c0~mv2.jpg" alt="Imagen noticia"></div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,504 @@
+/* ========================================
+   REDISEÑO COMPLETO - TARJETAS DE NOTICIAS FSQUASH
+   Diseño moderno con glassmorphism y gradientes
+   ======================================== */
+
+:root {
+    --primary-blue: #00A8FF;
+    --dark-blue: #0088CC;
+    --bg-dark: #0a0a0a;
+    --bg-light: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --border-radius: 20px;
+    --spacing: 24px;
+}
+
+
+
+/* === REDISEÑO DE TARJETAS DE NOTICIAS === */
+
+/* Contenedor principal de tarjetas */
+[data-testid="mesh-container-content"] {
+    position: relative;
+    margin-bottom: 40px !important;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+/* Tarjeta base - Diseño glassmorphism */
+[data-testid="colorbox"],
+[class*="colorbox"] {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.9) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 168, 255, 0.1) !important;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+        0 2px 4px rgba(0, 168, 255, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+}
+
+/* Efecto hover mejorado */
+[data-testid="colorbox"]:hover,
+[class*="colorbox"]:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    box-shadow:
+        0 24px 48px rgba(0, 168, 255, 0.15),
+        0 0 0 2px var(--primary-blue),
+        0 0 40px rgba(0, 168, 255, 0.2) !important;
+    border-color: var(--primary-blue) !important;
+}
+
+/* Borde superior con gradiente azul */
+[data-testid="colorbox"]::before,
+[class*="colorbox"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+[data-testid="colorbox"]:hover::before,
+[class*="colorbox"]:hover::before {
+    opacity: 1;
+}
+
+/* === IMÁGENES EN TARJETAS === */
+
+/* Contenedor de imagen mejorado */
+[data-testid="img"],
+[class*="img-wrapper"] {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Imagen con efecto */
+[data-testid="img"] img,
+img[data-src] {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 16px !important;
+}
+
+[data-testid="img"]:hover img,
+img[data-src]:hover {
+    transform: scale(1.08) !important;
+}
+
+/* Overlay con gradiente en imágenes */
+[data-testid="img"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(0, 0, 0, 0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+[data-testid="img"]:hover::after {
+    opacity: 1;
+}
+
+/* ================================================
+   ESTILOS PERSONALIZADOS PARA NOTICIAS
+   DISEÑO IDÉNTICO A FSQUASH.COM
+   ================================================ */
+
+/* Títulos principales - EXACTO A FSQUASH.COM */
+.news-article-title,
+.news-article-title-fixed,
+h1.font_0,
+.news-content-relative h1,
+.news-content-body h1,
+article h1 {
+    font-size: 31px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: rgb(0, 0, 0) !important;
+    text-align: left !important;
+    margin: 0 0 32px 0 !important;
+    /* Ajustado a 32px según análisis */
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: inherit !important;
+    text-shadow: none !important;
+}
+
+/* Párrafos - EXACTO A FSQUASH.COM */
+.font_8,
+.news-description,
+.news-content-body p,
+.news-content-relative p,
+article p {
+    font-size: 17px !important;
+    line-height: 27.2px !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: rgb(0, 0, 0) !important;
+    text-align: left !important;
+    margin: 0 0 30px 0 !important;
+    /* Ajustado a 30px según análisis */
+    padding: 0 !important;
+}
+
+/* Contenedor principal */
+.news-container-block {
+    max-width: 1300px !important;
+    /* AUMENTADO RADICALMENTE de 980px a 1300px */
+    margin: 0 auto !important;
+    padding: 40px 0 !important;
+    background: #ffffff !important;
+}
+
+/* Imágenes */
+article img,
+.news-content-body img,
+main img,
+main .wixui-image,
+main wow-image {
+    max-width: 850px !important;
+    /* Reducido de 100% para evitar imágenes gigantes */
+    width: auto !important;
+    height: auto !important;
+    margin: 20px !important;
+    /* Separación de 20px en todos los lados */
+    display: inline-block !important;
+    /* Permitir lado-a-lado si caben */
+    object-fit: cover !important;
+    vertical-align: top !important;
+    position: static !important;
+    /* Reset positioning to ensure flow */
+}
+
+/* Fix for Wix image containers usually being absolute/grid */
+main [data-testid="imageX"],
+main .wixui-box {
+    position: static !important;
+    display: inline-block !important;
+    width: auto !important;
+    margin: 10px !important;
+}
+
+/* Fix for generic Wix containers that trap content in small grids */
+main .max-width-container,
+main [data-testid="responsive-container-content"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1300px !important;
+    grid-template-columns: none !important;
+    box-sizing: border-box !important;
+}
+
+/* ULTRA-MEGA ESPECÍFICO: Forzar 31px en títulos h1 */
+html body main h1,
+html body main section h1,
+html body main div h1,
+html body main article h1,
+html body h1,
+body h1,
+main h1 {
+    font-size: 31px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: rgb(0, 0, 0) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 32px !important;
+}
+
+/* ULTRA-MEGA ESPECÍFICO: Forzar 17px en párrafos */
+html body main p,
+html body main section p,
+html body main div p,
+html body main article p,
+html body p,
+body p,
+main p {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: rgb(0, 0, 0) !important;
+    margin-bottom: 30px !important;
+}
+
+/* === ESTILOS LISTADO DE NOTICIAS (noticias.html) === */
+
+/* Contenedor de tarjeta de noticia */
+.wixui-repeater__item {
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+    /* Borde sutil opcional para separar */
+    border-radius: 8px !important;
+}
+
+/* Título de noticia en listado */
+.wixui-repeater__item h3,
+.wixui-repeater__item [class*="rich-text"] h3 {
+    font-size: 21px !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Extracto de noticia */
+.wixui-repeater__item p,
+.wixui-repeater__item [class*="rich-text"] p {
+    font-size: 16px !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    line-height: 1.5 !important;
+}
+
+/* Botón 'Ver noticia' */
+.wixui-repeater__item a.wixui-button,
+.wixui-repeater__item a.wixui-button span {
+    text-transform: none !important;
+    /* Evitar mayúsculas forzadas */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* Forzar texto 'Ver noticia' con primera mayúscula si es necesario (hack visual) */
+.wixui-repeater__item a.wixui-button span::first-letter {
+    text-transform: uppercase !important;
+}
+
+/* === PÁGINAS INDIVIDUALES DE NOTICIAS === */
+
+/* Fondo con gradiente sutil */
+main[id*="PAGES_CONTAINER"],
+[id*="SITE_PAGES"] {
+    background: #ffffff !important;
+}
+
+/* Contenedor de contenido de artículo */
+article,
+[role="article"],
+main {
+    max-width: 980px !important;
+    margin: 0 auto !important;
+    padding: 40px 24px !important;
+}
+
+
+
+
+
+/* Enlaces mejorados */
+a[data-testid*="linkElement"],
+article a,
+[role="article"] a {
+    color: var(--primary-blue) !important;
+    text-decoration: none !important;
+    position: relative !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+a[data-testid*="linkElement"]::after,
+article a::after,
+[role="article"] a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a[data-testid*="linkElement"]:hover::after,
+article a:hover::after,
+[role="article"] a:hover::after {
+    width: 100%;
+}
+
+a[data-testid*="linkElement"]:hover,
+article a:hover,
+[role="article"] a:hover {
+    color: var(--dark-blue) !important;
+}
+
+/* === BOTONES === */
+
+button[data-testid*="buttonElement"],
+[role="button"],
+.button-class {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 14px 32px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    letter-spacing: 0.02em !important;
+    box-shadow:
+        0 4px 12px rgba(0, 168, 255, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+}
+
+button[data-testid*="buttonElement"]:hover,
+[role="button"]:hover,
+.button-class:hover {
+    transform: translateY(-3px) !important;
+    box-shadow:
+        0 8px 24px rgba(0, 168, 255, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+}
+
+button[data-testid*="buttonElement"]:active,
+[role="button"]:active,
+.button-class:active {
+    transform: translateY(-1px) !important;
+}
+
+/* === ANIMACIONES === */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delays para animación escalonada */
+[data-testid="mesh-container-content"]:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+[data-testid="mesh-container-content"]:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+[data-testid="mesh-container-content"]:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+[data-testid="mesh-container-content"]:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+[data-testid="mesh-container-content"]:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+[data-testid="mesh-container-content"]:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 768px) {
+    :root {
+        --border-radius: 16px;
+        --spacing: 16px;
+    }
+
+    [data-testid="colorbox"],
+    [class*="colorbox"] {
+        border-radius: 16px !important;
+    }
+
+    article,
+    [role="article"] {
+        padding: 40px 20px !important;
+    }
+
+    article img,
+    [role="article"] img {
+        border-radius: 16px !important;
+    }
+}
+
+/* Updated: Mon Feb  2 19:05:12 CET 2026 */
+/* --- GRID LAYOUT FIX FOR NEWS INDEX --- */
+/* Target the Repeater Container */
+#comp-meidu2s8, #comp-meidu2s8-container {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Target the List inside Repeater */
+#comp-meidu2s8 [role="list"],
+#comp-meidu2s8 .comp-meidu2s8-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+}
+
+/* Reset individual Item positioning */
+#comp-meidu2s8 .wixui-repeater__item {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important; /* Fill grid cell */
+    height: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    background: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Try to style inner content if possible */
+/* This depends on inner structure, but simply gridifying the parents usually works */
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    #comp-meidu2s8 [role="list"],
+    #comp-meidu2s8 .comp-meidu2s8-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #comp-meidu2s8 [role="list"],
+    #comp-meidu2s8 .comp-meidu2s8-container {
+        grid-template-columns: 1fr !important;
+    }
+}

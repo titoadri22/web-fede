@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4ª Prueba Autonómica – Olympia Alcoy</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #000;
+            --bg-color: #f9f9f9;
+            --container-width: 1100px; /* Increased max width for BIGGER impact */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Placeholder - Minimalist */
+        .header-bar {
+            background: #fff;
+            padding: 10px 0; /* Reduced padding */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Reduced margin */
+        }
+        .header-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 10px 40px; /* Reduced padding side/top */
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        article {
+            padding: 20px; /* Reduced padding */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: #000;
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 900px; /* Wider text to match */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify; 
+        }
+        
+        .content-text p {
+            margin-bottom: 15px; 
+        }
+
+        /* Images Grid: 3 Columns Precise */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px; /* Tighter gap */
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            /* Calc width for 3 columns minus gap */
+            width: calc(33.333% - 8px); 
+            max-width: none; 
+            height: 550px; /* MUCH TALLER to allow vertical images to shine */
+            overflow: hidden; 
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+
+        .gallery-item:hover {
+            z-index: 10;
+            transform: scale(1.02); /* Pop out effect instead of just up */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                max-height: 600px;
+            }
+            article {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="header-content">
+            <a href="../index.html">← Volver a Noticias</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <article>
+            <h1>4ª Prueba Autonómica – Olympia Alcoy</h1>
+
+            <div class="content-text">
+                <p>4ª Prueba Autonómica – Olympia Alcoy
+Alcoy vivió una jornada de squash de altísimo nivel.</p>
+<p>El Olympia Alcoy acogió este fin de semana la cuarta cita del Circuito Autonómico de Squash, una prueba marcada por la emoción en cada categoría y por el gran ambiente que se respiró en las pistas.</p>
+<p>La 1ª categoría masculina tuvo como gran protagonista a Ernesto Revert, que se llevó el título tras una intensa final frente a Adrián Revert. El duelo por el tercer puesto fue para Guillermo Pedernera, con Guillermo Mongé completando las cuatro primeras posiciones.</p>
+<p>En la 2ª categoría masculina, Óscar Montoya fue el jugador más sólido y logró proclamarse campeón. Javi Hernández luchó hasta el último punto para quedarse con el subcampeonato, seguido por Carlos Vicent y Tino Ferrandis, que completaron un cuadro muy igualado.</p>
+<p>La 1ª categoría femenina tuvo como campeona a Marta Garrido, que brilló en la final ante Thais Miralles. Daria Bogdanova y Alicia Ferrer ofrecieron un gran nivel para terminar en la tercera y cuarta plaza respectivamente.</p>
+<p>1ª Categoría Masculina
+🥇 Ernesto Revert | 🥈 Adrián Revert | 🥉 Guillermo Pedernera | 4º Guillermo Mongé</p>
+<p>2ª Categoría Masculina
+🥇 Óscar Montoya | 🥈 Javi Hernández | 🥉 Carlos Vicent | 4º Tino Ferrandis</p>
+<p>1ª Categoría Femenina
+🥇 Marta Garrido | 🥈 Thais Miralles | 🥉 Daria Bogdanova | 4ª Alicia Ferrer</p>
+<p>La prueba de Alcoy confirma el excelente momento de forma de nuestros jugadores y deja el circuito autonómico muy emocionante de cara a las próximas citas, donde se definirán los campeones de la temporada.</p>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_6c033993d53345d0b281000ec3554a8c~mv2.jpeg" alt="Imagen noticia"></div><div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_2bb3ae719bdf4294b9b0c19b3e612e68~mv2.jpeg" alt="Imagen noticia"></div><div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_cd6793ed6c9146909ca9fde4808ad17a~mv2.jpeg" alt="Imagen noticia"></div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Squash Algemesí - 7º Puesto Campeonato de Europa</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #000;
+            --bg-color: #f9f9f9;
+            --container-width: 900px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Placeholder - Minimalist */
+        .header-bar {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        }
+
+        article {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: #000;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+            /* Or left, depending on preference. Keeping readable. */
+        }
+
+        .content-text p {
+            margin-bottom: 20px;
+        }
+
+        .team-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .team-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        /* Images Grid */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            /* Center vertically relative to each other */
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            flex: 1 1 45%;
+            /* Grow, shrink, basis 45% */
+            max-width: 48%;
+            /* Ensure they fit side by side */
+            height: 350px;
+            /* Fixed height for uniformity */
+            overflow: hidden;
+            /* Clean edges */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover fills the box neatly. Use contain if user insists on full image content. */
+            /* User complained about "not so long", so height is capped. Cover is best for aesthetics. */
+            display: block;
+        }
+
+        /* Mobile adjustment */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+                height: auto;
+                max-height: 400px;
+            }
+
+            article {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-bar">
+        <div class="header-content">
+            <a href="../index.html">← Volver a Noticias</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <article>
+            <h1>Club Squash Algemesí firma un histórico 7º puesto en el Campeonato de Europa por Clubes</h1>
+
+            <div class="content-text">
+                <p>El Club Squash Algemesí cerró una edición memorable del Campeonato de Europa por Clubes logrando un
+                    séptimo puesto que mejora la plaza del año pasado (10º) y, sobre todo, deja un hito para la entidad:
+                    primera clasificación a cuartos de final en su historia en la competición continental.</p>
+
+                <p>El conjunto valenciano se plantó en Graz con un bloque compacto y ambicioso. La fase inicial confirmó
+                    las buenas sensaciones y permitió al equipo entrar entre los ocho mejores. En cuartos, Algemesí se
+                    midió a uno de los grandes del continente, compitiendo con carácter y dejando pasajes de altísimo
+                    nivel. En los cruces por los puestos, el equipo remató el torneo con oficio para asegurar un top-7
+                    que certifica su crecimiento internacional.</p>
+            </div>
+
+            <div class="team-section">
+                <p class="team-title">Equipo formado por:</p>
+                <ul>
+                    <li>1. Robertino Pezzota</li>
+                    <li>2. Ernesto Revert Jr</li>
+                    <li>3. Adrián Revert</li>
+                    <li>4. Álex Boni</li>
+                </ul>
+                <br>
+                <p class="team-title">Equipo técnico:</p>
+                <ul>
+                    <li>Fisio: Carlos Jiménez</li>
+                    <li>Coach: Ernesto Revert</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <!-- Using contain to be safe per user's previous feedback, though cover is prettier -->
+                    <img style="object-fit: contain; background: #fff;" src="../assets/images/ALGEMESI.jpg"
+                        alt="Equipo Club Squash Algemesí">
+                </div>
+                <div class="gallery-item">
+                    <img style="object-fit: contain; background: #fff;" src="../assets/images/europa.jpg"
+                        alt="Campeonato de Europa">
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+
+</html>

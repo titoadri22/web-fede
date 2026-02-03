@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQUASH EN LOS JUEGOS OLIMPICOS 2028</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #000;
+            --bg-color: #f9f9f9;
+            --container-width: 1100px; /* Increased max width for BIGGER impact */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Placeholder - Minimalist */
+        .header-bar {
+            background: #fff;
+            padding: 10px 0; /* Reduced padding */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Reduced margin */
+        }
+        .header-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 10px 40px; /* Reduced padding side/top */
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        article {
+            padding: 20px; /* Reduced padding */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: #000;
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 900px; /* Wider text to match */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify; 
+        }
+        
+        .content-text p {
+            margin-bottom: 15px; 
+        }
+
+        /* Images Grid: 3 Columns Precise */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px; /* Tighter gap */
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            /* Calc width for 3 columns minus gap */
+            width: calc(33.333% - 8px); 
+            max-width: none; 
+            height: 550px; /* MUCH TALLER to allow vertical images to shine */
+            overflow: hidden; 
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+
+        .gallery-item:hover {
+            z-index: 10;
+            transform: scale(1.02); /* Pop out effect instead of just up */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                max-height: 600px;
+            }
+            article {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="header-content">
+            <a href="../index.html">← Volver a Noticias</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <article>
+            <h1>SQUASH EN LOS JUEGOS OLIMPICOS 2028</h1>
+
+            <div class="content-text">
+                <p>SQUASH EN LOS JUEGOS OLIMPICOS 2028
+Por primera vez, el squash estará en unos Juegos Olímpicos, y será nada menos que en Los Ángeles 2028. El torneo se jugará en un lugar de película: el famoso Universal Studios Lot, que se transformará en el Comcast Squash Center para la ocasión.</p>
+<p>Habrá 16 jugadores y 16 jugadoras, todos compitiendo en formato individual. Los partidos se jugarán al mejor de cinco juegos, cada uno hasta 11 puntos, lo que promete choques rápidos, intensos y muy emocionantes.</p>
+<p>Para los amantes del squash, este es un momento histórico: después de muchos años intentando entrar en el programa olímpico, por fin lo han conseguido. Además, en Estados Unidos ya se está moviendo la campaña “Drive to LA28” para darle más visibilidad al deporte y enganchar a nuevas generaciones.</p>
+<p>En resumen, en 2028 veremos al squash brillar en la gran pantalla… y en la cancha. Una mezcla perfecta entre deporte y el glamour de Hollywood.</p>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_66e8fa4aea6d417b99ea5a574b8c9f7f~mv2.png" alt="Imagen noticia"></div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+</html>

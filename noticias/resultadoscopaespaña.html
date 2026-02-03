@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEKSANDER 6º Y PABLO 9º EN LA COPA DE ESPAÑA SUB-13 Y SUB-17</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #000;
+            --bg-color: #f9f9f9;
+            --container-width: 1100px; /* Increased max width for BIGGER impact */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Placeholder - Minimalist */
+        .header-bar {
+            background: #fff;
+            padding: 10px 0; /* Reduced padding */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Reduced margin */
+        }
+        .header-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 10px 40px; /* Reduced padding side/top */
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        article {
+            padding: 20px; /* Reduced padding */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: #000;
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 900px; /* Wider text to match */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify; 
+        }
+        
+        .content-text p {
+            margin-bottom: 15px; 
+        }
+
+        /* Images Grid: 3 Columns Precise */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px; /* Tighter gap */
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            /* Calc width for 3 columns minus gap */
+            width: calc(33.333% - 8px); 
+            max-width: none; 
+            height: 550px; /* MUCH TALLER to allow vertical images to shine */
+            overflow: hidden; 
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+
+        .gallery-item:hover {
+            z-index: 10;
+            transform: scale(1.02); /* Pop out effect instead of just up */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                max-height: 600px;
+            }
+            article {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="header-content">
+            <a href="../index.html">← Volver a Noticias</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <article>
+            <h1>ALEKSANDER 6º Y PABLO 9º EN LA COPA DE ESPAÑA SUB-13 Y SUB-17</h1>
+
+            <div class="content-text">
+                <p>ALEKSANDER 6º Y PABLO 9º EN LA COPA DE ESPAÑA SUB-13 Y SUB-17
+El pasado fin de semana se disputó en Pontevedra la Copa de España Sub-13 y Sub-17, una de las pruebas clave del calendario nacional para las jóvenes promesas del squash.</p>
+<p>Resultados masculinos:</p>
+<p>Gran actuación de los jugadores de la Comunitat Valenciana, que volvieron a demostrar el gran momento que atraviesan nuestras categorías de base:</p>
+<p>Aleksander Sánchez Kuznetsov logró un fantástico 6º puesto en Sub-13, dejando muy buenas sensaciones y confirmando su gran progresión.</p>
+<p>Pablo Sanchis Tatay terminó en 9ª posición en Sub-17, compitiendo de tú a tú en una categoría de altísimo nivel.</p>
+<p>Sub-13: Aleksander Sánchez Kuznetsov → 6º puesto</p>
+<p>Sub-17: Pablo Sanchis Tatay → 9º puesto</p>
+<p>Los jugadores de la CV ya se preparan para la siguiente parada del calendario: la Copa de España Sub-11, Sub-15 y Sub-19, que se celebrará del 19 al 21 de septiembre en Benedikta (Sestao).</p>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_e793e24b2482426c8d320676b99514c2~mv2.jpg" alt="Imagen noticia"></div><div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_2f65f07582124eefba344aafebee52f3~mv2.jpg" alt="Imagen noticia"></div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+</html>

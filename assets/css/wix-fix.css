@@ -1,0 +1,279 @@
+/* ========================================
+   FIX PARA LAYOUT DE WIX - NOTICIAS
+   Soluciona: posicionamiento absoluto, títulos pequeños, superposiciones
+   ======================================== */
+
+/* FORZAR posicionamiento relativo en lugar de absoluto */
+main,
+main *,
+section,
+section *,
+article,
+article *,
+[id*="PAGES"],
+[id*="PAGES"] *,
+[class*="wixui"],
+[class*="wixui"] * {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* Contenedores principales con altura automática */
+main,
+section,
+article,
+[id*="PAGES"],
+div[class*="wixui"] {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* TÍTULOS - Identificar por font-weight: 700 (negrita) */
+p[class*="font_"][style*="font-weight"],
+[class*="wixui-rich-text__text"] {
+    /* Por defecto, texto normal */
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 16px !important;
+    color: #2a2a2a !important;
+}
+
+/* Elementos con font-weight 700 o bold = TÍTULOS */
+p[class*="font_"].font_8.wixui-rich-text__text,
+p[class*="font_"].font_7.wixui-rich-text__text,
+p[class*="font_"].font_6.wixui-rich-text__text,
+[class*="wixui-rich-text__text"][class*="font_"] {
+    font-size: 18px !important;
+}
+
+/* TÍTULOS - Usando clase inyectada por layout-fix.js */
+.news-article-title,
+.news-article-title-fixed {
+    display: block !important;
+    font-family: inherit !important;
+    font-size: 40px !important;
+    /* 2.5rem */
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #000000 !important;
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+    padding-bottom: 10px !important;
+    position: relative !important;
+    width: 100% !important;
+    clear: both !important;
+}
+
+/* Espaciado para evitar solapamientos */
+.news-article-title-fixed+* {
+    margin-top: 20px !important;
+}
+
+/* --- FIX VISUAL DE NOTICIAS --- */
+
+/* 1. Tarjetas de Resumen (en noticias.html) */
+/* Replicando el estilo de fsquash.com/blank-5 */
+.wixui-repeater__item {
+    background-color: #f2f2f2 !important;
+    /* Gris claro */
+    border-radius: 10px !important;
+    padding: 30px !important;
+    margin-bottom: 20px !important;
+    box-sizing: border-box !important;
+    /* Asegurar layout vertical en el wrapper principal */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: auto !important;
+    overflow: visible !important;
+    /* Espaciado solicitado por el usuario */
+    margin: 20px !important;
+}
+
+/* FIX NUCLEAR: Desactivar Grid/Absoluto en TODOS los hijos directos e indirectos de la tarjeta */
+/* Esto fuerza que título, texto y botón se apilen verticalmente sí o sí */
+.wixui-repeater__item * {
+    position: relative !important;
+    grid-area: auto !important;
+    top: auto !important;
+    left: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+}
+
+.wixui-repeater__item>div {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+}
+
+/* Espaciado para el texto */
+.wixui-repeater__item [data-testid="richTextElement"],
+.wixui-repeater__item .wixui-rich-text {
+    margin-bottom: 15px !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Títulos de tarjetas en mayúsculas */
+.wixui-repeater__item h2,
+.wixui-repeater__item h3,
+.wixui-repeater__item [data-testid="richTextElement"] h2 {
+    text-transform: uppercase !important;
+    color: #000 !important;
+    margin-bottom: 10px !important;
+    line-height: 1.2 !important;
+}
+
+/* Botón "Ver noticia" */
+.wixui-repeater__item a[aria-label="Ver noticia"],
+.wixui-repeater__item .wixui-button {
+    background-color: transparent !important;
+    border: 1px solid #000 !important;
+    border-radius: 20px !important;
+    /* Ovalado */
+    color: #000 !important;
+    padding: 8px 25px !important;
+    text-align: center !important;
+
+    /* Restaurar comportamiento inline-block para el botón */
+    display: inline-block !important;
+    width: auto !important;
+
+    margin-top: 20px !important;
+    /* Separación del texto */
+    align-self: center !important;
+    /* Centrar horizontalmente en el flex padre */
+
+    transition: background-color 0.3s ease !important;
+}
+
+.wixui-repeater__item a[aria-label="Ver noticia"]:hover,
+.wixui-repeater__item .wixui-button:hover {
+    background-color: #e0e0e0 !important;
+}
+
+
+/* 2. Detalle de Noticia (Fix de Solapamiento) */
+
+/* Clase auxiliar que añadirá el script Python al contenedor padre */
+.news-container-block {
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    grid-template-rows: none !important;
+    grid-template-columns: none !important;
+}
+
+/* Clase auxiliar para los hijos (título y texto) */
+.news-content-relative {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+    transform: none !important;
+    grid-area: auto !important;
+    /* Desactivar grid placement */
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* Ajuste específico para el cuerpo de la noticia para separarlo del título */
+/* Ajuste específico para el cuerpo de la noticia para separarlo del título */
+.news-content-body {
+    margin-top: 20px !important;
+    position: relative !important;
+    padding: 0 5px !important;
+    /* Extra padding just for body text if needed */
+}
+
+/* FIX IMÁGENES NOTICIAS - Centrado y espaciado */
+.news-content-body img,
+.news-content-relative img,
+.news-content-body picture img,
+.news-content-relative picture img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    float: none !important;
+    object-fit: contain !important;
+}
+
+/* Asegurar contenedores de imagenes */
+.news-content-body picture,
+.news-content-relative picture,
+.news-content-body figure,
+.news-content-relative figure {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
+/* H1 inyectado */
+.news-article-title-fixed {
+    margin-bottom: 30px !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word !important;
+}
+
+/* Excepciones (Mantenemos por seguridad) */
+main span,
+main a,
+main strong,
+main em {
+    display: inline !important;
+    width: auto !important;
+    margin-bottom: 0 !important;
+}
+
+[data-testid="richTextElement"]>p:first-child,
+[class*="wixui-rich-text"]>p:first-child {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 24px !important;
+}
+
+/* Todos los párrafos normales */
+p {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 16px !important;
+}
+
+/* Contenedores de texto con altura automática y márgenes */
+[data-testid="richTextElement"],
+[class*="wixui-rich-text"],
+div[class*="richtext"] {
+    height: auto !important;
+    min-height: auto !important;
+    position: relative !important;
+    margin-bottom: 30px !important;
+}
+
+/* Eliminar márgenes excesivos de Wix */
+[class*="wixui-rich-text"] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Espaciado entre elementos */
+p+p,
+div+div {
+    margin-top: 20px !important;
+}
+
+/* Contenedor principal más compacto */
+main {
+    padding: 40px 20px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}

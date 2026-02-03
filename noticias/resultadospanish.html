@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁLEX BONI, TERCER CLASIFICADO EN EL SPANISH JUNIOR OPEN</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #000;
+            --bg-color: #f9f9f9;
+            --container-width: 1100px; /* Increased max width for BIGGER impact */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Placeholder - Minimalist */
+        .header-bar {
+            background: #fff;
+            padding: 10px 0; /* Reduced padding */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Reduced margin */
+        }
+        .header-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 10px 40px; /* Reduced padding side/top */
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        article {
+            padding: 20px; /* Reduced padding */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: #000;
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 900px; /* Wider text to match */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify; 
+        }
+        
+        .content-text p {
+            margin-bottom: 15px; 
+        }
+
+        /* Images Grid: 3 Columns Precise */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px; /* Tighter gap */
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            /* Calc width for 3 columns minus gap */
+            width: calc(33.333% - 8px); 
+            max-width: none; 
+            height: 550px; /* MUCH TALLER to allow vertical images to shine */
+            overflow: hidden; 
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+
+        .gallery-item:hover {
+            z-index: 10;
+            transform: scale(1.02); /* Pop out effect instead of just up */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                max-height: 600px;
+            }
+            article {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="header-content">
+            <a href="../index.html">← Volver a Noticias</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <article>
+            <h1>ÁLEX BONI, TERCER CLASIFICADO EN EL SPANISH JUNIOR OPEN</h1>
+
+            <div class="content-text">
+                <p>ÁLEX BONI, TERCER CLASIFICADO EN EL SPANISH JUNIOR OPEN
+El Spanish Junior Open volvió a situar a España en el mapa internacional del squash de base, reuniendo en nuestras pistas a jóvenes promesas procedentes de numerosos países europeos. Durante varios días se vivió un ambiente espectacular de competición y convivencia, donde los jugadores españoles supieron estar a la altura frente a una exigente participación internacional.</p>
+<p>El gran protagonista fue Álex Boni, que alcanzó un brillante 3º puesto en su categoría y subió al podio europeo tras una trayectoria impecable. Ganó todos sus partidos salvo en semifinales, donde cedió frente al campeón Marc Altarriba, demostrando un nivel altísimo y consolidándose como una de las grandes promesas del squash español.</p>
+<p>También destacada fue la actuación de Pablo Sanchis, que alcanzó la 10ª posición, mostrando un juego sólido y regular. Aleksander Sánchez Kuznetsov firmó un meritorio 14º lugar en un cuadro muy exigente, mientras que Eduardo Kuenhel cerró su participación con la 21ª plaza, confirmando su crecimiento y sumando una valiosa experiencia internacional.</p>
+<p>RESULTADOS JUGADORES VALENCIANOS:</p>
+<p>Álex Boni – 3º (sub19)</p>
+<p>Pablo Sanchis – 10º (sub17)</p>
+<p>Aleksander Sánchez Kuznetsov – 14º (sub13)</p>
+<p>Eduardo Kuenhel – 21º (sub15)</p>
+<p>🔹 El Spanish Junior Open confirma el buen momento del squash de formación en España, con una generación de jóvenes jugadores que ya compite de manera destacada frente a las potencias europeas.</p>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item"><img src="https://static.wixstatic.com/media/6e556b_96e36ab39baa438eaadc0ca6bdc2e89f~mv2.jpg" alt="Imagen noticia"></div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+</html>
